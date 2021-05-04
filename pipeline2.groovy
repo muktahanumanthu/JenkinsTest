@@ -1,6 +1,8 @@
 import groovy.*
 
-num = param.number
+num = params.number
+
+BRANCH_NAME = params.BRANCH_NAME
 
 echo $num
 
@@ -25,7 +27,7 @@ def main() {
                 echo("Branch for code checkout : $env.BRANCH_NAME")
 
 				echo("Checking out the code")
-				gitCheckout("your git URL", env.BRANCH_NAME)
+				gitCheckout("https://github.com/muktahanumanthu/JenkinsTest.git", params.BRANCH_NAME)
                 
                 // Check if version already exisits
 				}
@@ -58,7 +60,7 @@ def gitCheckout(def gitURL, def gitBranch){
         submoduleCfg: [],
         userRemoteConfigs: [
             [
-                credentialsId: 'adityy_github',
+                credentialsId: '37263308-b4a6-4327-8c72-ef8f4d969b46',
                 url: "${gitURL}"
             ]
         ]
