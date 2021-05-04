@@ -1,8 +1,8 @@
 import groovy.*
 
-num = params.number
+def num = params.number
 
-BRANCH_NAME = params.BRANCH_NAME
+def BRANCH_NAME = params.BRANCH_NAME
 
 echo $num
 
