@@ -1,6 +1,7 @@
 import groovy.*
 
 def num = params.number
+print(num)
 
 def BRANCH_NAME = params.BRANCH_NAME
 
