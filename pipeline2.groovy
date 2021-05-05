@@ -31,7 +31,7 @@ def main() {
                 // Check if version already exisits
 				}
             stage('Build') {
-		echo $num    
+		echo ${params.num}    
                 sh """
                   ./build.sh ${num}
                 """
