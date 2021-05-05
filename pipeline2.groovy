@@ -32,7 +32,7 @@ def main() {
 				}
             stage('Build') {
                 sh """
-                  ./build.sh $num
+                  ./build.sh ${num}
                 """
             }
 
