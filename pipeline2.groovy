@@ -40,6 +40,13 @@ def main() {
                 ls -lrt
                 """
             }
+            stage('deploy')
+            {
+                sh """
+                chmod 755 deploy.sh
+                ./deploy.sh
+                """
+            }
 
 
 	}
