@@ -33,7 +33,9 @@ def main() {
             stage('Build') {
 		echo "${params.number}"    
                 sh """
-                  ./build.sh ${params.number}
+		ls -lrt
+		chmod 755 build.sh
+                ./build.sh ${params.number}
                 """
             }
 
