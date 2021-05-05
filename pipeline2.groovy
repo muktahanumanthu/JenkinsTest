@@ -4,7 +4,6 @@ def num = params.number
 
 def BRANCH_NAME = params.BRANCH_NAME
 
-echo $num
 
 if (main() == "SUCCESS"){
     echo("Main Success")
