@@ -33,7 +33,7 @@ def main() {
             stage('Build') {
 		echo "${params.number}"    
                 sh """
-                  ./build.sh ${num}
+                  ./build.sh ${params.number}
                 """
             }
 
