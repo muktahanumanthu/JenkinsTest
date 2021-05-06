@@ -49,7 +49,7 @@ def main() {
             }
             stage("triggering another build job")
             {
-                build job: 'Freestylejob'
+                build job: 'freestylejob'
             }
 
 
