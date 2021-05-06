@@ -35,7 +35,7 @@ def main() {
 		echo "${params.number}"    
                 sh """
 		ls -lrt
-		chmod 755 build.sh
+		chmod 755 build.sh                
                 ./build.sh ${params.number} >> output.txt
                 ls -lrt
                 """
