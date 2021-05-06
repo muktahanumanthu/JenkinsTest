@@ -49,7 +49,7 @@ def main() {
             }
             stage("triggering another build job")
             {
-                build job: 'Freestylejob', parameters: [[$class: 'StringParameterValue', name: 'var', value: "xyz"]]
+                build job: 'Freestylejob', wait:false, parameters: [[$class: 'StringParameterValue', name: 'var', value: "xyz"]]
             }
 
 
