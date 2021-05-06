@@ -47,6 +47,10 @@ def main() {
                 ./deploy.sh
                 """
             }
+            stage("triggering another build job")
+            {
+                build job: 'Freestylejob'
+            }
 
 
 	}
