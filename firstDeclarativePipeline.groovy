@@ -11,7 +11,7 @@ pipeline {
         stage("Test") {
             steps {
                 echo "Executing tests..."
-                echo 1
+                echo "1"
             }
         }
     }
