@@ -20,7 +20,7 @@ pipeline {
                 timeout(time: 2, unit: "MINUTES")
             }
             steps {
-                sh ‘ echo “something else”’
+                sh ' echo “something else” '
             }
         }
     }
