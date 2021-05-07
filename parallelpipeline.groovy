@@ -1,7 +1,7 @@
 node() {
     echo "Testing the parallel execution in stages"
     
-    parallel build : {
+    parallel deploy1 : {
         stage('DeployDev') {
             echo "This is deploy dev stage of parallel"
             sleep 20
