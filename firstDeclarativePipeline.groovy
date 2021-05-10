@@ -6,7 +6,7 @@ pipeline {
     }
     
     environment{
-        env_val = "blah"
+        env_val = "Test"
     }
 
     stages {
@@ -21,7 +21,7 @@ pipeline {
 
         stage("Test") {
             when {
-                environment name: "env_val", value: "dev"
+                environment name: "env_val", value: "Test"
             }
             options {
                 timeout(time: 2, unit: "MINUTES")

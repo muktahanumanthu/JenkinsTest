@@ -1,5 +1,6 @@
 node {
-    timestamps {
+    timestamps 
+        {
             stage("Build") {
                 timeout(time: 1, unit: "MINUTES") {
                     sh """ echo “something”
@@ -13,5 +14,5 @@ node {
                     """
                 }
             }
-    }
+        }
 }
