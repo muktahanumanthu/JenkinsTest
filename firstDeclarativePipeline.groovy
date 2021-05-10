@@ -4,26 +4,42 @@ pipeline {
     options {
         timestamps()
     }
+    
+    environment{
+        env_val = "blah"
+    }
 
     stages {
         stage("Build") {
             options {
-                timeout(time: 10, unit: "SECONDS")
+                timeout(time: 1, unit: "MINUTES")
             }
             steps {
-                sh ' echo “something” '
-                sleep 15
-                            }
+                sh 'echo "Building code"'
+            }
         }
 
         stage("Test") {
+            when {
+                environment name: "env_val", value: "dev"
+            }
             options {
                 timeout(time: 2, unit: "MINUTES")
             }
             steps {
-                sh ' echo “something else” '
+                sh """ echo "running in test" """
+            }
+        }
+        stage("dev") {
+            when {
+                environment name: "env_val", value: "dev"
+            }
+            options {
+                timeout(time: 2, unit: "MINUTES")
+            }
+            steps {
+                sh 'echo "running in test"'
             }
         }
     }
 }
-            
