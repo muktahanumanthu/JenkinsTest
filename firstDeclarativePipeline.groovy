@@ -32,7 +32,12 @@ pipeline {
                 timeout(time: 2, unit: "MINUTES")
             }
             steps {
-                sh """ echo "running in test" """
+                sh """ 
+                echo "running in test" 
+                echo "running in test2"
+                echo "running in test3"
+                echo "running in test4" 
+                """
             }
         }
         stage("dev") {
