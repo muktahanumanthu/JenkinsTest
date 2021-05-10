@@ -6,7 +6,7 @@ pipeline {
     }
     
     environment{
-        env_val = "Test"
+        env_val = "dev"
     }
 
     stages {
@@ -38,7 +38,7 @@ pipeline {
                 timeout(time: 2, unit: "MINUTES")
             }
             steps {
-                sh 'echo "running in test"'
+                sh 'echo "running in dev"'
             }
         }
     }
