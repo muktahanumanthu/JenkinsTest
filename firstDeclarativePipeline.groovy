@@ -15,7 +15,12 @@ pipeline {
                 timeout(time: 1, unit: "MINUTES")
             }
             steps {
-                sh 'echo "Building code, branch2"'
+                sh """echo "Building code, branch2"
+                echo "Building code, branch1"
+                echo "Building code, branchX"
+                echo "Building code, branchY"
+                echo "Building code, branchZ"
+                """
             }
         }
 
