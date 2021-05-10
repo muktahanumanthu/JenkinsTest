@@ -6,7 +6,7 @@ node {
                     sh 'echo "in build"'
                 }
             }
-            if (env.name == "Dev") {
+            if (env.name == "Test") {
                 stage("Test") {
                     timeout(time: 2, unit: "MINUTES") {
                         sh 'echo "Running in test"'

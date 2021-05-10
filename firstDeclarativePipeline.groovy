@@ -38,7 +38,7 @@ pipeline {
                 timeout(time: 2, unit: "MINUTES")
             }
             steps {
-                sh 'echo "running in dev"'
+                sh 'echo "running in dev, changes done in branch2"'
             }
         }
     }
