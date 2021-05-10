@@ -16,6 +16,7 @@ pipeline {
             }
             steps {
                 sh 'echo "Building code,"'
+                sh 'echo "Building code: branch1"'
             }
         }
 
