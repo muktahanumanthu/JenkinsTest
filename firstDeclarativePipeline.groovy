@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage("Build") {
             options {
-                timeout(time: 1, unit: "MINUTES")
+                timeout(time: 1, unit: "MINUTES") //just a random comment
             }
             steps {
                 sh 'echo "Building code,"'
